@@ -1,0 +1,242 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: WP Appointments Scheduler 1.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-01-01 00:00+0000\n"
+"PO-Revision-Date: 2025-01-01 00:00+0000\n"
+"Last-Translator: Seu Nome <you@example.com>\n"
+"Language-Team: Portuguese (Brazil)\n"
+"Language: pt_BR\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: manually created\n"
+"X-Domain: wp-appointments-scheduler\n"
+
+#: includes/admin/views/view-professionals.php:4
+msgid "Profissionais"
+msgstr "Profissionais"
+
+#: includes/admin/views/view-professionals.php:6
+msgid "Adicionar Profissional"
+msgstr "Adicionar Profissional"
+
+#: includes/admin/views/view-professionals.php:7
+msgid "Editar Profissional"
+msgstr "Editar Profissional"
+
+#: includes/admin/views/view-professionals.php:14
+msgid "Nome"
+msgstr "Nome"
+
+#: includes/admin/views/view-professionals.php:21
+msgid "Email"
+msgstr "Email"
+
+#: includes/admin/views/view-professionals.php:28
+msgid "Contato"
+msgstr "Contato"
+
+#: includes/admin/views/view-professionals.php:35
+msgid "Ativo"
+msgstr "Ativo"
+
+#: includes/admin/views/view-professionals.php:41
+msgid "Sim"
+msgstr "Sim"
+
+#: includes/admin/views/view-professionals.php:54
+msgid "Lista de Profissionais"
+msgstr "Lista de Profissionais"
+
+#: includes/admin/views/view-professionals.php:66
+msgid "Ações"
+msgstr "Ações"
+
+#: includes/admin/views/view-professionals.php:75
+msgid "Editar"
+msgstr "Editar"
+
+#: includes/admin/views/view-professionals.php:86
+msgid "Remover"
+msgstr "Remover"
+
+#: includes/admin/views/view-professionals.php:93
+msgid "Nenhum profissional cadastrado."
+msgstr "Nenhum profissional cadastrado."
+
+#: includes/admin/views/view-services.php:4
+msgid "Serviços"
+msgstr "Serviços"
+
+#: includes/admin/views/view-services.php:6
+msgid "Adicionar Serviço"
+msgstr "Adicionar Serviço"
+
+#: includes/admin/views/view-services.php:7
+msgid "Editar Serviço"
+msgstr "Editar Serviço"
+
+#: includes/admin/views/view-services.php:24
+msgid "Categoria"
+msgstr "Categoria"
+
+#: includes/admin/views/view-services.php:32
+msgid "Sem categoria"
+msgstr "Sem categoria"
+
+#: includes/admin/views/view-services.php:44
+msgid "Preço"
+msgstr "Preço"
+
+#: includes/admin/views/view-services.php:57
+msgid "Duração (minutos)"
+msgstr "Duração (minutos)"
+
+#: includes/admin/views/view-services.php:68
+msgid "Descrição"
+msgstr "Descrição"
+
+#: includes/admin/views/view-services.php:94
+msgid "Lista de Serviços"
+msgstr "Lista de Serviços"
+
+#: includes/admin/views/view-services.php:118
+msgid "Nenhum serviço cadastrado."
+msgstr "Nenhum serviço cadastrado."
+
+#: includes/admin/views/view-appointments.php:3
+msgid "Agendamentos"
+msgstr "Agendamentos"
+
+#: includes/admin/views/view-appointments.php:5
+msgid "Aqui você acompanha e gerencia os agendamentos realizados pelos clientes."
+msgstr "Aqui você acompanha e gerencia os agendamentos realizados pelos clientes."
+
+#: includes/admin/views/view-appointments.php:14
+msgid "Período"
+msgstr "Período"
+
+#: includes/admin/views/view-appointments.php:35
+msgid "Filtrar"
+msgstr "Filtrar"
+
+#: includes/admin/views/view-appointments.php:44
+msgid "Data"
+msgstr "Data"
+
+#: includes/admin/views/view-appointments.php:45
+msgid "Horário"
+msgstr "Horário"
+
+#: includes/admin/views/view-appointments.php:46
+msgid "Cliente"
+msgstr "Cliente"
+
+#: includes/admin/views/view-appointments.php:47
+msgid "Profissional"
+msgstr "Profissional"
+
+#: includes/admin/views/view-appointments.php:48
+msgid "Serviço"
+msgstr "Serviço"
+
+#: includes/admin/views/view-appointments.php:49
+msgid "Status"
+msgstr "Status"
+
+#: includes/admin/views/view-appointments.php:81
+msgid "Nenhum agendamento encontrado."
+msgstr "Nenhum agendamento encontrado."
+
+#: includes/admin/views/view-agenda.php:3
+msgid "Agenda de Profissionais"
+msgstr "Agenda de Profissionais"
+
+#: includes/admin/views/view-agenda.php:5
+msgid "Configure os dias e horários de trabalho dos profissionais, intervalos e bloqueios de dias específicos."
+msgstr "Configure os dias e horários de trabalho dos profissionais, intervalos e bloqueios de dias específicos."
+
+#: includes/admin/views/view-agenda.php:11
+msgid "Profissional"
+msgstr "Profissional"
+
+#: includes/admin/views/view-agenda.php:36
+msgid "Gerar horários para um período"
+msgstr "Gerar horários para um período"
+
+#: includes/admin/views/view-agenda.php:42
+msgid "Data inicial"
+msgstr "Data inicial"
+
+#: includes/admin/views/view-agenda.php:49
+msgid "Data final"
+msgstr "Data final"
+
+#: includes/admin/views/view-agenda.php:56
+msgid "Horário inicial"
+msgstr "Horário inicial"
+
+#: includes/admin/views/view-agenda.php:63
+msgid "Horário final"
+msgstr "Horário final"
+
+#: includes/admin/views/view-agenda.php:70
+msgid "Duração de cada slot (minutos)"
+msgstr "Duração de cada slot (minutos)"
+
+#: includes/admin/views/view-agenda.php:78
+msgid "Dias da semana"
+msgstr "Dias da semana"
+
+#: includes/admin/views/view-agenda.php:109
+msgid "Tipo de slot"
+msgstr "Tipo de slot"
+
+#: includes/admin/views/view-agenda.php:139
+msgid "Calendário do mês"
+msgstr "Calendário do mês"
+
+#: includes/public/views/view-booking-wizard.php:4
+msgid "Agendar Agora"
+msgstr "Agendar Agora"
+
+#: includes/public/views/view-booking-wizard.php:10
+msgid "Passo 1"
+msgstr "Passo 1"
+
+#: includes/public/views/view-booking-wizard.php:11
+msgid "Dados do Cliente"
+msgstr "Dados do Cliente"
+
+#: includes/public/views/view-booking-wizard.php:16
+msgid "Passo 2"
+msgstr "Passo 2"
+
+#: includes/public/views/view-booking-wizard.php:17
+msgid "Escolha de Profissional, Serviço e Horário"
+msgstr "Escolha de Profissional, Serviço e Horário"
+
+#: includes/public/views/view-booking-wizard.php:22
+msgid "Passo 3"
+msgstr "Passo 3"
+
+#: includes/public/views/view-booking-wizard.php:23
+msgid "Confirmação do Agendamento"
+msgstr "Confirmação do Agendamento"
+
+#: includes/public/class-wpas-ajax.php:77
+msgid "Informe o nome do cliente."
+msgstr "Informe o nome do cliente."
+
+#: includes/public/class-wpas-ajax.php:81
+msgid "Profissional, serviço, data e horário são obrigatórios."
+msgstr "Profissional, serviço, data e horário são obrigatórios."
+
+#: includes/public/class-wpas-ajax.php:117
+msgid "Agendamento realizado com sucesso! Em breve o profissional poderá entrar em contato para confirmar."
+msgstr "Agendamento realizado com sucesso! Em breve o profissional poderá entrar em contato para confirmar."
+
+#: includes/public/class-wpas-ajax.php:121
+msgid "Erro ao criar o agendamento. Tente novamente."
+msgstr "Erro ao criar o agendamento. Tente novamente."
