@@ -3,6 +3,10 @@ Thumbs.db
 *.log
 *.zip
 node_modules/
-vendor/
 .idea/
 .vscode/
+
+vendor/*
+
+!vendor/plugin-update-checker/
+!vendor/plugin-update-checker/**
