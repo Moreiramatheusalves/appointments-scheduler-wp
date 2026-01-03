@@ -1,0 +1,509 @@
+.wpas-booking-wrapper {
+    position: relative;
+    --wpas-bg: #ffffff;
+    --wpas-text: #111827;
+    --wpas-muted: #6b7280;
+    --wpas-border: #e5e7eb;
+    --wpas-border-strong: #d1d5db;
+
+    --wpas-primary: #2563eb;
+    --wpas-primary-600: #1d4ed8;
+    --wpas-primary-700: #1e40af;
+
+    --wpas-success-bg: #ecfdf5;
+    --wpas-success-border: #34d399;
+    --wpas-success-text: #065f46;
+
+    --wpas-error-bg: #fef2f2;
+    --wpas-error-border: #f87171;
+    --wpas-error-text: #7f1d1d;
+
+    --wpas-radius: 14px;
+    --wpas-radius-sm: 10px;
+
+    --wpas-shadow: 0 24px 60px rgba(0, 0, 0, 0.25);
+    --wpas-shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.15);
+
+    --wpas-ring: 0 0 0 4px rgba(37, 99, 235, 0.18);
+    color: var(--wpas-text);
+}
+
+.wpas-booking-wrapper .wpas-open-booking-button {
+    appearance: none;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    background: linear-gradient(180deg, var(--wpas-primary), var(--wpas-primary-700));
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1;
+    padding: 12px 18px;
+    border-radius: 999px;
+    cursor: pointer;
+    box-shadow: 0 10px 24px rgba(37, 99, 235, 0.25);
+    transition: transform .15s ease, box-shadow .15s ease, filter .15s ease;
+}
+
+.wpas-booking-wrapper .wpas-open-booking-button:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 14px 30px rgba(37, 99, 235, 0.28);
+    filter: brightness(1.02);
+}
+
+.wpas-booking-wrapper .wpas-open-booking-button:active {
+    transform: translateY(0);
+    box-shadow: 0 10px 22px rgba(37, 99, 235, 0.22);
+}
+
+.wpas-booking-wrapper .wpas-open-booking-button:focus-visible {
+    outline: none;
+    box-shadow: var(--wpas-ring), 0 14px 30px rgba(37, 99, 235, 0.28);
+}
+
+.wpas-booking-dialog {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, .55);
+    z-index: 999999;
+    display: none;
+    padding: 24px;
+}
+
+body.wpas-dialog-open {
+    overflow: hidden;
+}
+
+.wpas-booking-dialog-content {
+    width: min(680px, 100%);
+    background: var(--wpas-bg);
+    margin: auto;
+    margin-top: 5vh;
+    border-radius: var(--wpas-radius);
+    box-shadow: var(--wpas-shadow);
+    position: relative;
+    overflow: hidden;
+
+    transform: translateY(6px);
+    opacity: 0.98;
+    animation: wpasModalIn .18s ease-out forwards;
+}
+
+@keyframes wpasModalIn {
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.wpas-booking-dialog-content::before {
+    content: "";
+    display: block;
+    height: 10px;
+    background: linear-gradient(90deg, var(--wpas-primary), #22c55e);
+    opacity: 0.9;
+}
+
+.wpas-booking-dialog-close {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 999px;
+    font-size: 22px;
+    cursor: pointer;
+    line-height: 1;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.10);
+    transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.wpas-booking-dialog-close:hover {
+    transform: scale(1.03);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.14);
+}
+
+.wpas-booking-dialog-close:focus-visible {
+    outline: none;
+    box-shadow: var(--wpas-ring), 0 10px 20px rgba(0, 0, 0, 0.14);
+}
+
+.wpas-booking-dialog-content>*:not(.wpas-booking-dialog-close) {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.wpas-booking-steps {
+    display: flex;
+    gap: 10px;
+    padding-top: 14px;
+    padding-bottom: 12px;
+    margin: 0;
+}
+
+.wpas-booking-steps .step {
+    flex: 1;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--wpas-muted);
+    padding: 10px 10px;
+    border: 1px solid var(--wpas-border);
+    border-radius: 999px;
+    background: #f9fafb;
+    position: relative;
+    user-select: none;
+}
+
+.wpas-booking-steps .step.active {
+    color: #fff;
+    border-color: transparent;
+    background: linear-gradient(180deg, var(--wpas-primary), var(--wpas-primary-700));
+    box-shadow: 0 10px 22px rgba(37, 99, 235, 0.18);
+}
+
+.wpas-step-content {
+    display: none;
+    padding-top: 6px;
+    padding-bottom: 14px;
+}
+
+.wpas-step-content.active {
+    display: block;
+}
+
+.wpas-step-content h3 {
+    margin: 8px 0 12px;
+    font-size: 18px;
+    letter-spacing: -0.01em;
+    color: var(--wpas-text);
+}
+
+#wpas-booking-form {
+    padding-bottom: 10px;
+}
+
+#wpas-booking-form p {
+    margin: 0 0 12px;
+}
+
+#wpas-booking-form label {
+    display: block;
+    font-weight: 700;
+    font-size: 16px;
+    color: var(--wpas-text);
+    margin-bottom: 10px;
+    line-height: 2;
+}
+
+#wpas-booking-form input[type="text"],
+#wpas-booking-form input[type="email"],
+#wpas-booking-form input[type="tel"],
+#wpas-booking-form input[type="date"],
+#wpas-booking-form select,
+#wpas-booking-form textarea {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    padding: 11px 12px;
+    border: 1px solid var(--wpas-border-strong);
+    border-radius: var(--wpas-radius-sm);
+    font-size: 16px;
+    color: var(--wpas-text);
+    background: #fff;
+    transition: box-shadow .15s ease, border-color .15s ease, transform .08s ease;
+}
+
+#wpas-booking-form select {
+    padding-right: 36px;
+    background-image:
+        linear-gradient(45deg, transparent 50%, var(--wpas-muted) 50%),
+        linear-gradient(135deg, var(--wpas-muted) 50%, transparent 50%);
+    background-position:
+        calc(100% - 18px) calc(50% - 2px),
+        calc(100% - 12px) calc(50% - 2px);
+    background-size: 6px 6px, 6px 6px;
+    background-repeat: no-repeat;
+    appearance: none;
+}
+
+#wpas-booking-form input:focus,
+#wpas-booking-form select:focus,
+#wpas-booking-form textarea:focus {
+    outline: none;
+    border-color: rgba(37, 99, 235, 0.65);
+    box-shadow: var(--wpas-ring);
+}
+
+#wpas-booking-form input:disabled,
+#wpas-booking-form select:disabled,
+#wpas-booking-form textarea:disabled {
+    background: #f3f4f6;
+    color: #9ca3af;
+    cursor: not-allowed;
+}
+
+.wpas-confirmation-warning {
+    margin: 12px 0 0;
+    padding: 12px 12px;
+    border-radius: var(--wpas-radius-sm);
+    background: #fffbeb;
+    border: 1px solid #f59e0b33;
+    color: #92400e;
+    font-size: 16px;
+    line-height: 1.35;
+}
+
+.wpas-confirmation-summary {
+    margin: 0 0 10px;
+    padding: 12px 12px;
+    border-radius: var(--wpas-radius-sm);
+    background: #f9fafb;
+    border: 1px solid var(--wpas-border);
+    color: var(--wpas-text);
+    font-size: 16px;
+    line-height: 1.35;
+}
+
+.wpas-booking-actions {
+    margin-top: 14px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.wpas-booking-wrapper .button,
+.wpas-booking-wrapper button,
+.wpas-booking-wrapper input[type="button"],
+.wpas-booking-wrapper input[type="submit"] {
+    border-radius: 12px;
+    padding: 10px 14px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+    border: 1px solid var(--wpas-border-strong);
+    background: #fff;
+    color: var(--wpas-text);
+    transition: transform .12s ease, box-shadow .15s ease, border-color .15s ease, background .15s ease;
+}
+
+.wpas-booking-wrapper .button:hover,
+.wpas-booking-wrapper button:hover,
+.wpas-booking-wrapper input[type="button"]:hover,
+.wpas-booking-wrapper input[type="submit"]:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--wpas-shadow-soft);
+    border-color: rgba(0, 0, 0, 0.12);
+}
+
+.wpas-booking-wrapper .button:active,
+.wpas-booking-wrapper button:active,
+.wpas-booking-wrapper input[type="button"]:active,
+.wpas-booking-wrapper input[type="submit"]:active {
+    transform: translateY(0);
+}
+
+.wpas-booking-wrapper .button:focus-visible,
+.wpas-booking-wrapper button:focus-visible,
+.wpas-booking-wrapper input[type="button"]:focus-visible,
+.wpas-booking-wrapper input[type="submit"]:focus-visible {
+    outline: none;
+    box-shadow: var(--wpas-ring), var(--wpas-shadow-soft);
+}
+
+.wpas-booking-wrapper .button-primary {
+    background: linear-gradient(180deg, var(--wpas-primary), var(--wpas-primary-700));
+    border-color: transparent;
+    color: #fff;
+    box-shadow: 0 12px 26px rgba(37, 99, 235, 0.22);
+}
+
+.wpas-booking-wrapper .button-primary:hover {
+    background: linear-gradient(180deg, var(--wpas-primary-600), var(--wpas-primary-700));
+    box-shadow: 0 16px 34px rgba(37, 99, 235, 0.26);
+}
+
+.wpas-step-1 .button,
+.wpas-step-2 .button,
+.wpas-step-3 .button {
+    margin-top: 6px;
+}
+
+.wpas-booking-result {
+    display: none;
+    margin: 14px 20px 20px;
+    padding: 12px 12px;
+    border-radius: var(--wpas-radius-sm);
+    font-size: 16px;
+    background: var(--wpas-success-bg);
+    border: 1px solid var(--wpas-success-border);
+    color: var(--wpas-success-text);
+    line-height: 1.35;
+}
+
+.wpas-booking-result.error {
+    background: var(--wpas-error-bg);
+    border-color: var(--wpas-error-border);
+    color: var(--wpas-error-text);
+}
+
+@media (max-width: 680px) {
+    .wpas-booking-dialog {
+        padding: 14px;
+    }
+
+    .wpas-booking-dialog-content {
+        margin-top: 3vh;
+        border-radius: 16px;
+    }
+
+    .wpas-booking-steps {
+        flex-direction: row;
+        gap: 6px;
+    }
+
+    .wpas-booking-steps .step {
+        text-align: center;
+        font-size: 10px;
+        padding: 8px 6px;
+        line-height: 1.1;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        min-width: 0;
+    }
+
+    .wpas-step-2 .button,
+    .wpas-step-3 .button {
+        width: 100%;
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 420px) {
+    .wpas-booking-dialog-content>*:not(.wpas-booking-dialog-close) {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .wpas-step-content h3 {
+        font-size: 17px;
+    }
+
+    .wpas-booking-steps {
+        gap: 4px;
+    }
+
+    .wpas-booking-steps .step {
+        font-size: 9px;
+        padding: 7px 5px;
+    }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .wpas-booking-dialog-content {
+        animation: none;
+    }
+
+    .wpas-booking-wrapper * {
+        transition: none !important;
+    }
+}
+
+.wpas-booking-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    margin-top: 14px;
+}
+
+@media (max-width:680px) {
+    .wpas-booking-actions {
+        flex-direction: column;
+    }
+
+    .wpas-booking-actions .button,
+    .wpas-booking-actions button,
+    .wpas-booking-actions input[type="button"],
+    .wpas-booking-actions input[type="submit"] {
+        width: 100%;
+    }
+}
+
+#wpas-booking-form .wpas-field-error {
+    border-color: #dc3232 !important;
+    box-shadow: 0 0 0 1px rgba(220, 50, 50, .25);
+    outline: none;
+}
+
+#wpas-booking-form .wpas-field-error-message {
+    display: block;
+    margin-top: 6px;
+    font-size: 16px;
+    color: #dc3232;
+    line-height: 1.2;
+}
+
+#wpas-booking-form .wpas-field-row {
+    display: grid;
+    gap: 12px;
+}
+
+#wpas-booking-form .wpas-field-row--2 {
+    grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 680px) {
+    #wpas-booking-form .wpas-field-row--2 {
+        grid-template-columns: 1fr;
+    }
+
+    #wpas-booking-form input[type="text"],
+    #wpas-booking-form input[type="email"],
+    #wpas-booking-form input[type="tel"],
+    #wpas-booking-form input[type="date"],
+    #wpas-booking-form select,
+    #wpas-booking-form textarea {
+        font-size: 16px;
+    }
+}
+
+#wpas-booking-form * {
+    max-width: 100%;
+}
+
+#wpas-booking-form input[type="date"] {
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    height: 44px;
+    min-height: 44px;
+    line-height: 44px;
+    padding: 0 12px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+
+@supports (-webkit-touch-callout: none) {
+    #wpas-booking-form input[type="date"] {
+        -webkit-appearance: none;
+        appearance: none;
+        background-color: #fff;
+    }
+}
+
+@media (max-width: 680px) {
+    .wpas-booking-steps .step {
+        font-size: 10px;
+    }
+}
+
+@media (max-width: 420px) {
+    .wpas-booking-steps .step {
+        font-size: 9px;
+    }
+}
