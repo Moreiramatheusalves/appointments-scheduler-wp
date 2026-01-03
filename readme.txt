@@ -5,7 +5,7 @@ Tags: appointments, booking, schedule, agenda, profissionais, serviços, reserva
 Requires at least: 5.8
 Tested up to: 6.6
 Requires PHP: 7.4
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -106,7 +106,7 @@ Site: https://breniacsoftec.com/
 
 == Changelog ==
 
-= 1.0.0 =
+= 1.0.1 =
 * Lançamento inicial.
 * Cadastro de profissionais, categorias e serviços.
 * Agenda por profissional (dias, horários, bloqueios).
@@ -116,5 +116,5 @@ Site: https://breniacsoftec.com/
 
 == Upgrade Notice ==
 
-= 1.0.0 =
+= 1.0.1 =
 Versão inicial estável do WP Appointments Scheduler.
