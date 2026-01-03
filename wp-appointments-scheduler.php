@@ -2,20 +2,21 @@
 
 /**
  * Plugin Name:       Appointments Scheduler BRENIAC
- * Plugin URI:        https://breniacsoftec.com
+ * Plugin URI:        https://breniacsoftec.com/appointments-scheduler/
  * Description:       Plugin de Agendamento de Serviços.
- * Version:           1.0.1
+ * Version:           1.0.2
  * Author:            BR Eniac SofTec
  * Author URI:        https://breniacsoftec.com
  * Text Domain:       appointments-scheduler-breniac
  * Domain Path:       /languages
+ * Update URI:        https://github.com/Moreiramatheusalves/appointments-scheduler-wp
  */
 
 if (! defined('ABSPATH')) {
     exit;
 }
 
-define('WPAS_VERSION', '1.0.1');
+define('WPAS_VERSION', '1.0.2');
 define('WPAS_PLUGIN_FILE', __FILE__);
 define('WPAS_PLUGIN_DIR', plugin_dir_path(__FILE__));
 define('WPAS_PLUGIN_URL', plugin_dir_url(__FILE__));
@@ -55,8 +56,9 @@ if (is_admin()) {
         $updateChecker = Puc_v4_Factory::buildUpdateChecker(
             'https://github.com/Moreiramatheusalves/appointments-scheduler-wp/',
             __FILE__,
-            'appointments-scheduler-wp'
+            'wp-appointments-scheduler'
         );
+
 
         $updateChecker->getVcsApi()->enableReleaseAssets();
 
